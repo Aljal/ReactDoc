@@ -19,6 +19,9 @@ app
     server.use(express.static(path.join(__dirname, 'ressources/images')))
 
     server.get('*', (req, res) => {
+      console.log(req.url)
+      if (req.url != '/' && req.url.indexOf('_next') < 0)
+        res.redirect('/')
       return handle(req, res)
     })
 
