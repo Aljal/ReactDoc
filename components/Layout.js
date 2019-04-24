@@ -1,9 +1,8 @@
-import { Container } from 'react-bootstrap'
 import '../style/header.scss'
 
 const Header = () => (
   <div id="header">
-    <img src="jobmeup_logo.jpg"/>
+    <img src="jobmeup_logo.png"/>
     <div className="content">
       <h1 id="welcome">Welcome</h1>
       <span>To JobMeUp API</span>
@@ -12,10 +11,10 @@ const Header = () => (
 )
 
 const Layout = props => (
-  <Container>
+  <div className="container">
     <Header />
     {props.children}
-  </Container>
+  </div>
 )
 
 export default Layout

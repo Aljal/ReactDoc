@@ -18,11 +18,6 @@ app
 
     server.use(express.static(path.join(__dirname, 'ressources/images')))
 
-    server.get('/', (req, res) => {
-      queryParams = { doc : JSON.parse(doc)}
-      app.render(req, res, '/', queryParams)
-    })
-
     server.get('*', (req, res) => {
       return handle(req, res)
     })

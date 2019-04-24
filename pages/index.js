@@ -2,13 +2,12 @@ import React from 'react'
 import { withRouter } from 'next/router'
 import Layout from "../components/Layout"
 import Menu from "../components/Menu"
+import Doc from "../ressources/json/doc"
 
 function Index(props) {
-  const doc = props.router.query.doc
-
   return (
     <Layout>
-      <Menu doc={doc}/>
+      <Menu doc={Doc}/>
     </Layout>
   )
 }

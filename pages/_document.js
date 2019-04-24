@@ -3,7 +3,6 @@
 
 // ./pages/_document.js
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { Container } from 'react-bootstrap';
 import '../style/header.scss'
 
 
