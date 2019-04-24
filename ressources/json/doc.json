@@ -1,0 +1,188 @@
+[
+  {
+    "title": "Users",
+    "bdd_keyword": [
+      "has_many: photos"
+    ],
+    "methods": [
+      {
+        "name": "Create",
+        "type": "post",
+        "description": "Create a user",
+        "url": "/api/users",
+        "parameters": [
+          "email", "first_name", "last_name", "password"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "created user informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "409",
+            "json_content": "error email already exist"
+          }
+        ]
+      },
+      {
+        "name": "Index",
+        "type": "get",
+        "description": "Get all users",
+        "url": "/api/users",
+        "parameters": [],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "all users informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          }
+        ]
+      },
+      {
+        "name": "Show",
+        "type": "get",
+        "description": "Get one user",
+        "url": "/api/users/:userId",
+        "parameters": [
+          "userId (inurl)"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "user informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          }
+        ]
+      },
+      {
+        "name": "FindByEmail",
+        "type": "post",
+        "description": "Get one user using email",
+        "url": "/api/users/email/:userEmail",
+        "parameters": [
+          "userEmail (inurl)"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "user informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "404",
+            "json_content": "error user not found"
+          }
+        ]
+      },
+      {
+        "name": "FindByName",
+        "type": "post",
+        "description": "Get one user using first_name, last_name or both",
+        "url": "/api/users/name",
+        "parameters": [
+          "first_name", "last_name"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "user informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "404",
+            "json_content": "error user not found"
+          }
+        ]
+      },
+      {
+        "name": "Login",
+        "type": "post",
+        "description": "Log a user in",
+        "url": "/api/users/login",
+        "parameters": [
+          "email", "password"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "all user informations"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "401",
+            "json_content": "authentifiction_failure wrong password"
+          },
+          {
+            "status": "404",
+            "json_content": "error user not found"
+          }
+        ]
+      },
+      {
+        "name": "Destroy",
+        "type": "delete",
+        "description": "Delete a user",
+        "url": "/api/users/:userId",
+        "parameters": [
+          "userId (inurl)"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "status success"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "404",
+            "json_content": "error user not found"
+          }
+        ]
+      },
+      {
+        "name": "DestroyByEmail",
+        "type": "delete",
+        "description": "Delete a user",
+        "url": "/api/users/email/:userEmail",
+        "parameters": [
+          "userEmail (inurl)"
+        ],
+        "return": [
+          {
+            "status": "200",
+            "json_content": "status success"
+          },
+          {
+            "status": "400",
+            "json_content": "error and description"
+          },
+          {
+            "status": "404",
+            "json_content": "error user not found"
+          }
+        ]
+      }
+    ]
+  }
+]

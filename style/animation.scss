@@ -1,0 +1,27 @@
+$rangeIn: 200px;
+$rangeOut: 1500px;
+$durationIn: 600ms;
+$durationOut: 500ms;
+
+.alert-enter {
+  opacity: 0;
+  transform: translateX(-$rangeIn);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity $durationIn, transform $durationIn;
+}
+
+.alert-exit {
+  opacity: 1;
+  display: none;
+  position: absolute;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: translateX($rangeOut);
+  transition: opacity $durationOut, transform $durationOut;
+}

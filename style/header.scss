@@ -1,0 +1,48 @@
+/*
+** Style for header component
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+$head-color: #ee5250;
+
+body {
+  font-family: "Oswald", "Arial";
+}
+
+div.container {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #DDD;
+}
+
+div#header {
+  margin: auto;
+  width: 100%;
+  border-bottom: 2px solid $head-color;
+}
+
+img {
+  position: relative;
+  top: -15px;
+  height: 80px;
+  float: left;
+}
+
+div.content {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+div.content h1 {
+  color: $head-color;
+  font-size: 50px;
+  margin: 0;
+}
+
+div.content span {
+  top: -19px;
+  color: black;
+  position: relative;
+}

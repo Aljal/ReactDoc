@@ -1,0 +1,63 @@
+
+div.api-methods {
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+div.method-list {
+  font-size: 18px;
+  padding: 0 20px;
+  width: 30%;
+  display: inline-block;
+}
+
+li.api-call {
+  color: #4286f4;
+  list-style-type: square;
+}
+
+li.api-call a {
+  color: #4286f4;
+  text-decoration: none;
+}
+
+/* Methods style */
+
+div.method {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+}
+
+span.name {
+  position: relative;
+  left: 10px;
+  bottom: -7px;
+  font-size: 25px;
+  font-style: italic;
+  color: grey;
+}
+
+div.description {
+  border: 2px solid grey;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px 15px;
+}
+
+span.header {
+  color: grey;
+  text-decoration: underline;
+  font-style: italic;
+  display: block;
+}
+
+span.content {
+  margin-left: 20px;
+  display: block;
+}
+
+span.bdd-keyword {
+  font-style: bold;
+  text-decoration: underline;
+}
