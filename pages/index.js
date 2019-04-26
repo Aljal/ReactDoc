@@ -1,8 +1,7 @@
 import React from 'react'
-import { withRouter } from 'next/router'
-import Layout from "../components/Layout"
-import Menu from "../components/Menu"
-import Doc from "../ressources/json/doc"
+import Layout from '../components/Layout'
+import Menu from '../components/Menu'
+import Doc from '../ressources/json/doc'
 
 function Index(props) {
   return (
@@ -12,4 +11,4 @@ function Index(props) {
   )
 }
 
-export default withRouter(Index)
+export default Index

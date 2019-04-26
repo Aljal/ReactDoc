@@ -1,9 +1,14 @@
+import React from 'react';
+import Link from 'next/link'
+import { CSSTransition } from 'react-transition-group';
+import Button from '../components/Button'
+
 import '../style/menu.scss';
 import '../style/animation.scss';
-import React from 'react';
-import { CSSTransition } from 'react-transition-group';
 
 function Method(props) {
+  console.log(props.method.name + ' ' + props.method.parameters.length + ' ' + props.method.type.toUpperCase())
+  console.log(props.method.name + ' ' + (props.method.parameters.length == 0 && props.method.type.toUpperCase() == 'GET').toString())
     return (
       <div id={"method-" + props.id} className="method">
         <span className="name">{props.method.name}</span>
@@ -36,6 +41,9 @@ function Method(props) {
               )
             })}
           </p>
+          {props.method.parameters.length == 0 && props.method.type.toUpperCase() == 'GET' &&
+            <Button className="test" text={"Tester " + props.method.url} link={props.method.url}/>
+          }
         </div>
       </div>
     )

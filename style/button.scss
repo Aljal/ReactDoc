@@ -1,0 +1,27 @@
+/*
+** Style for Button component
+*/
+
+.alignCenter {
+  text-align: center;
+}
+
+a.button {
+  height: 50px;
+  background-color: #ee5250;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+  :hover {
+    opacity: 0.8;
+  }
+}
+
+.test {
+  margin: 40px 0 20px 0;
+}
+
+.returnHome {
+  margin: 100px 0 50px 0;
+}
