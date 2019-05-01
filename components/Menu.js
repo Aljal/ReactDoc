@@ -7,8 +7,6 @@ import '../style/menu.scss';
 import '../style/animation.scss';
 
 function Method(props) {
-  console.log(props.method.name + ' ' + props.method.parameters.length + ' ' + props.method.type.toUpperCase())
-  console.log(props.method.name + ' ' + (props.method.parameters.length == 0 && props.method.type.toUpperCase() == 'GET').toString())
     return (
       <div id={"method-" + props.id} className="method">
         <span className="name">{props.method.name}</span>
